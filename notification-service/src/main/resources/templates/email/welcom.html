@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chào mừng đến với Booking.com</title>
+  </head>
+
+  <body
+    style="margin: 0; font-family: Arial, sans-serif; background-color: #f6f6f6"
+  >
+    <div
+      style="
+        background-color: #ffffff;
+        border: 1px solid #dddddd;
+        height: 100vh;
+      "
+    >
+      <div style="background-color: #003580; padding: 12px">
+        <div
+          style="
+            width: 580px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          "
+        >
+          <a
+            th:href="@{${frontendUrl}}"
+            style="color: white; font-weight: 700; font-size: 22px; cursor: pointer"
+          >
+            Booking.com
+          </a>
+        </div>
+      </div>
+
+      <div
+        style="
+          width: 580px;
+          margin: auto;
+          font-size: 14px;
+          color: #333;
+          padding-top: 16px;
+        "
+      >
+        <h2 style="color: #333333; font-size: 24px">Welcome to Booking.com!</h2>
+        <p>
+          Có rất nhiều nơi trên Việt Nam để khám phá, một tài khoản mới sẽ giúp
+          bạn làm điều đó
+        </p>
+        <a
+          th:href="@{${frontendUrl}}"
+          style="
+            background-color: #0071c2;
+            color: #ffffff;
+            padding: 10px 64px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+            display: block;
+            text-align: center;
+            margin-bottom: 16px;
+            cursor: pointer;
+          "
+          >Khám phá ngay</a
+        >
+        <div
+          style="
+            border: 1px solid #ddd;
+            padding: 12px 16px;
+			border-radius: 4px;
+            font-family: Arial, sans-serif;
+          "
+        >
+          <h2 style="font-size: 14px; font-weight: bold">
+            Your account details
+          </h2>
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              padding:8px 0
+            "
+          >
+            <div style="color: #6b6b6b">Email address</div>
+            <div >
+              <a
+                href="mailto:${email}"
+                style="text-decoration: underline; color: #1155cc"
+                >${email}</a
+              >
+            </div>
+          </div>
+          <div style="display: flex; justify-content: space-between; padding:8px 0">
+            <div style="color: #6b6b6b">Creation date</div>
+            <div>${createdAt}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
